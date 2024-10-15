@@ -2,11 +2,11 @@ import { Button, styled, Typography } from "@mui/material";
 
 export const StyledSubmitButton = styled(Button, {
   name: 'SubmitButton'
-})(() => ({
+})(({ theme }) => ({
   fontSize: 60,
-  backgroundColor: 'violet',
+  backgroundColor: theme.palette.primary.main,
   '&:hover': {
-    backgroundColor: 'blue'
+    backgroundColor: theme.palette.secondary.main
   }
 }));
 
@@ -14,5 +14,5 @@ export const StyledTitle = styled(Typography, {
   name: 'Title'
 })(({ theme }) =>({
   textDecoration: 'underline',
-  marginBottom: theme.spacing(3)
+  marginBottom: theme.spacing(4)
 }))
