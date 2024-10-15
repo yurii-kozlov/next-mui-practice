@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Roboto } from 'next/font/google';
 import { Providers } from "@/Providers";
+import { Container } from "@mui/material";
 import "./globals.scss";
 
 const roboto = Roboto({
@@ -24,7 +25,9 @@ export default function RootLayout({
     <html lang="en" className={roboto.className}>
       <body>
         <Providers>
-          {children}
+          <Container>
+            {children}
+          </Container>
         </Providers>
       </body>
     </html>

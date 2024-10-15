@@ -1,18 +1,34 @@
-import { Box } from "@chakra-ui/react";
-import { TopBar } from "@/components/TopBar";
-import { TodoList } from "@/components/TodoList";
-import { TodoAdd } from "@/components/TodoAdd";
+'use client'
+
+import { StyledSubmitButton, StyledTitle } from "./page.style";
 
 export default function Home() {
   return (
     <div>
-      <main>
-      <Box maxWidth="8xl" margin="auto" p={5}>
-        <TopBar />
-        <TodoList />
-        <TodoAdd />
-      </Box>
-      </main>
+      <StyledTitle variant="h6" color="textSecondary" gutterBottom>
+        Hello
+      </StyledTitle>
+
+      <StyledSubmitButton
+        type="submit"
+        color="secondary"
+        variant="contained"
+        onClick={() => console.log('click')}
+      >
+        Submit
+      </StyledSubmitButton>
+
+      {/* <Button type="submit">
+        Submit
+      </Button>
+      <Button type="submit" color="secondary" variant="outlined">
+        Submit
+      </Button>
+      <ButtonGroup color="secondary" variant="contained">
+        <Button>One</Button>
+        <Button>Two</Button>
+        <Button>Three</Button>
+      </ButtonGroup> */}
     </div>
   );
 }

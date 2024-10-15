@@ -1,7 +1,7 @@
 'use client'
 
-import { ChakraProvider, theme } from "@chakra-ui/react"
 import { FC, ReactElement, ReactNode } from "react"
+import { AppRouterCacheProvider } from '@mui/material-nextjs/v14-appRouter';
 
 interface ProvidersProps {
   children: ReactNode
@@ -9,8 +9,8 @@ interface ProvidersProps {
 
 export const Providers: FC<ProvidersProps> = ({ children }): ReactElement => {
   return (
-    <ChakraProvider theme={theme}>
+    <AppRouterCacheProvider>
       {children}
-    </ChakraProvider>
+    </AppRouterCacheProvider>
   )
 }
