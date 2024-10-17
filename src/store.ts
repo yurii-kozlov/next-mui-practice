@@ -1,25 +1,46 @@
-import { Todo } from "./types";
+import { action, makeObservable, observable } from "mobx";
+import { Category } from "./types/Category";
 
-export const updateTodo = (todos: Todo[], id: number, text: string): Todo[] =>
-  todos.map((todo) => ({
-    ...todo,
-    text: todo.id === id ? text : todo.text,
-  }));
+class NotesStore {
+  title: string = '';
+  details: string= '';
+  isTitleError: boolean = false;
+  isDetailsError: boolean = false;
+  category: Category = Category.Money
 
-export const toggleTodo = (todos: Todo[], id: number): Todo[] =>
-  todos.map((todo) => ({
-    ...todo,
-    done: todo.id === id ? !todo.done : todo.done,
-  }));
+  constructor() {
+    makeObservable(this, {
+      title: observable,
+      details: observable,
+      isDetailsError: observable,
+      isTitleError: observable,
+      category: observable,
+      setTitle: action,
+      setDetails: action,
+      setIsDetailsError: action,
+      setIsTitleError: action,
+    })
+  }
 
-export const removeTodo = (todos: Todo[], id: number): Todo[] =>
-  todos.filter((todo) => todo.id !== id);
+  setTitle(newTitle: string): void {
+    this.title = newTitle;
+  };
 
-export const addTodo = (todos: Todo[], text: string): Todo[] => [
-  ...todos,
-  {
-    id: Math.max(0, Math.max(...todos.map(({ id }) => id))) + 1,
-    text,
-    done: false,
-  },
-];
+  setDetails(newDetails: string): void {
+    this.details = newDetails;
+  };
+
+  setIsTitleError(isTitleError: boolean): void {
+    this.isTitleError = isTitleError;
+  };
+
+  setIsDetailsError(isDetailsError: boolean): void {
+    this.isDetailsError = isDetailsError;
+  };
+
+  setCategory(newCategory: Category): void {
+    this.category = newCategory;
+  }
+};
+
+export default NotesStore;
