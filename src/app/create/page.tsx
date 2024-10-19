@@ -1,3 +1,11 @@
-const CreatePage = () => <div>Create page</div>;
+import { CreateNotes } from '@/components/CreateNotes';
 
-export default CreatePage;
+const Create = () => {
+  return (
+    <div>
+      <CreateNotes />
+    </div>
+  );
+};
+
+export default Create;
