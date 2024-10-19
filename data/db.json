@@ -4,31 +4,19 @@
       "title": "Yoshi's birthday bash",
       "details": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt veritatis facere soluta quod non officia adipisci vel necessitatibus modi praesentium? Facilis doloremque culpa, soluta dicta aliquid sint saepe delectus expedita.",
       "category": "reminders",
-      "id": 1
+      "id": "1"
     },
     {
       "title": "Complete my ninja training",
       "details": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt veritatis facere soluta quod non officia adipisci vel necessitatibus modi praesentium? Facilis doloremque culpa, soluta dicta aliquid sint saepe delectus expedita.",
       "category": "work",
-      "id": 2
+      "id": "2"
     },
     {
       "title": "Order a pizza",
       "details": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt veritatis facere soluta quod non officia adipisci vel necessitatibus modi praesentium? Facilis doloremque culpa, soluta dicta aliquid sint saepe delectus expedita.",
       "category": "todos",
-      "id": 3
-    },
-    {
-      "id": 0.8068277272612239,
-      "title": "New note title",
-      "details": "Some deats ilsososoo sdfosdof sdfosdf",
-      "category": "todos"
-    },
-    {
-      "id": 0.6191922985361791,
-      "title": "Practice MUI",
-      "details": "Uioi ooosos soaosdosaod",
-      "category": "money"
+      "id": "3"
     }
   ]
 }

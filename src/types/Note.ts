@@ -4,5 +4,5 @@ export interface Note {
   title: string;
   details: string;
   category: Category;
-  id: number;
+  id: string;
 }

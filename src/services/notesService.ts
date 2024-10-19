@@ -6,23 +6,34 @@ import { AxiosError } from "axios";
 class NotesService {
   async fetchNotes(): Promise<ApiResponse<Note[]>> {
     try {
-      const result = await apiInstance.get<Note[]>('/notes');
+      const result = await apiInstance.get<Note[]>("/notes");
 
-      return { result: result.data, error: null }
+      return { result: result.data, error: null };
     } catch (error: unknown) {
       const axiosError = error as AxiosError;
-      return {result: null, error: axiosError.message || 'Error happened during the request'};
+      return { result: null, error: axiosError.message || "Error happened during the request" };
     }
   }
 
   async postNote(note: Note): Promise<ApiResponse<string>> {
     try {
-      await apiInstance.post<Note>('/notes', { ...note });
+      await apiInstance.post<Note>("/notes", { ...note });
 
-      return { result: 'OK', error: null }
+      return { result: "OK", error: null };
     } catch (error) {
       const axiosError = error as AxiosError;
-      return {result: null, error: axiosError.message || 'Error happened during the request'};
+      return { result: null, error: axiosError.message || "Error happened during the request" };
+    }
+  }
+
+  async deleteNote(id: string): Promise<ApiResponse<string>> {
+    try {
+      await apiInstance.delete('/notes/' + id);
+
+      return { result: 'OK', error: null };
+    } catch (error) {
+      const axiosError = error as AxiosError;
+      return { result: null, error: axiosError.message || "Error happened during the request" };
     }
   }
 }

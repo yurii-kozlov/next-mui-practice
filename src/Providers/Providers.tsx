@@ -6,6 +6,7 @@ import { ThemeProvider } from "@mui/material";
 import { NotesContext } from "@/contexts/NotesContext";
 import theme from "@/themes/light-theme";
 import NotesStore from "@/store";
+
 const notesStore = new NotesStore()
 
 interface ProvidersProps {
