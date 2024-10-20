@@ -1,4 +1,4 @@
-import { action, makeObservable, observable, toJS } from "mobx";
+import { action, makeObservable, observable } from "mobx";
 import { Category } from "./types/Category";
 import { notesService } from "./services/notesService";
 import { Note } from "./types/Note";
@@ -9,7 +9,6 @@ class NotesStore {
   isTitleError: boolean = false;
   isDetailsError: boolean = false;
   category: Category = Category.Money;
-  updatedNotes: Note[] = [];
   notes: Note[] = [];
 
   constructor() {
@@ -19,7 +18,6 @@ class NotesStore {
       isDetailsError: observable,
       isTitleError: observable,
       category: observable,
-      updatedNotes: observable,
       notes: observable,
       setTitle: action,
       setDetails: action,
@@ -53,16 +51,13 @@ class NotesStore {
 
   setNotes(notes: Note[]): void {
     this.notes = notes;
-    this.updatedNotes = notes;
   };
 
   async deleteNote(id: string): Promise<void> {
     await notesService.deleteNote(id);
-    console.log(toJS(this.notes))
     const updatedNotes = this.notes.filter((note) => note.id !== id);
-    console.log(toJS(updatedNotes))
 
-    this.updatedNotes = updatedNotes;
+    this.notes = updatedNotes;
   }
 };
 

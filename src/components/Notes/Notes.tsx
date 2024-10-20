@@ -12,23 +12,16 @@ interface NotesProps {
 }
 
 export const Notes: FC<NotesProps> = observer(({ notes }) => {
-  console.log('server', notes)
   const notesStore = useNotesStore();
-  // notesStore.setNotes(notes);
+
   useEffect(() => {
     notesStore.setNotes(notes);
   }, [])
 
-  const currentNotes = notesStore.updatedNotes.length > 0 
-   ? notesStore.updatedNotes
-   : notes
-
-  console.log(notesStore.updatedNotes.length)
-
   return (
     <div>
       <Grid container spacing={15}>
-        {currentNotes.map((note) => (
+        {notesStore.notes.map((note) => (
           <Grid key={note.id} item xs={12} md={6} lg={4}>
             <NoteCard note={note}/>
           </Grid>
