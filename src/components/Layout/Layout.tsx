@@ -1,7 +1,6 @@
 import React, { FC, ReactNode } from 'react'
-import Typography from '@mui/material/Typography';
 import { DrawerMenuItems } from '../DrawerMenuItems';
-import { StyledWrapper, StyledDrawer, StyledChildrenWrapper } from './Layout.style';
+import { StyledWrapper, StyledDrawer, StyledChildrenWrapper, StyledTitle } from './Layout.style';
 
 interface LayoutProps {
   children: ReactNode
@@ -15,9 +14,9 @@ export const Layout: FC<LayoutProps> = ({ children }) => {
         anchor="left"
       >
         <div>
-          <Typography variant="h5">
+          <StyledTitle variant="h5">
             Ninja Notes
-          </Typography>
+          </StyledTitle>
         </div>
         <DrawerMenuItems />
       </StyledDrawer>

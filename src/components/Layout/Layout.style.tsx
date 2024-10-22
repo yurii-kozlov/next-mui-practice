@@ -1,6 +1,6 @@
 'use client'
 
-import { styled, drawerClasses as MuiDrawerClasses } from "@mui/material";
+import { styled, drawerClasses as MuiDrawerClasses, Typography } from "@mui/material";
 import Drawer from "@mui/material/Drawer";
 
 export const StyledWrapper = styled('div', {
@@ -25,4 +25,10 @@ export const StyledChildrenWrapper = styled('div', {
   name: 'ChildrenWrapper'
 })(() => ({
   width: '100%'
+}))
+
+export const StyledTitle = styled(Typography, {
+  name: 'Title'
+})(({ theme }) =>({
+  padding: theme.spacing(8)
 }))
