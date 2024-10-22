@@ -1,11 +1,10 @@
 "use client";
 
-import Link from "next/link";
 import { ListItemIcon, ListItemText } from "@mui/material";
 import { StyledListItemButton } from "./DrawerMenuItem.styles";
 import { MenuItem } from "@/types/MenuItem";
 import { FC } from "react";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 
 interface DrawerMenuItemProps {
   menuItem: MenuItem
@@ -13,12 +12,14 @@ interface DrawerMenuItemProps {
 
 export const DrawerMenuItem: FC<DrawerMenuItemProps> = ({ menuItem }) => {
   const pathname = usePathname();
+  const router = useRouter();
 
   const { text, path, icon } = menuItem;
   const isRouteActive = pathname === path;
+  console.log('helo', 'sasd')
 
   return (
-    <StyledListItemButton key={text} LinkComponent={Link} href={path} isRouteActive={isRouteActive}>
+    <StyledListItemButton onClick={() => router.push(path)} key={text} isRouteActive={isRouteActive}>
       <ListItemIcon>{icon}</ListItemIcon>
       <ListItemText primary={text} />
     </StyledListItemButton>

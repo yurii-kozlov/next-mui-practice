@@ -9,9 +9,9 @@ export const StyledListItemButton = styled(ListItemButton, {
   shouldForwardProp: (prop) => prop !== 'isRouteActive',
 })<{ isRouteActive: boolean }>(({ theme, isRouteActive }) => ({
   '&:hover': {
-    background: theme.palette.neutral.tones[80],
+    background: theme.palette.neutral.tones[90],
   },
   ...(isRouteActive && {
-    background: theme.palette.neutral.tones[90]
+    background: theme.palette.neutral.tones[80]
   }),
 }))
