@@ -1,7 +1,7 @@
 'use client';
 
 import { Note } from "@/types/Note";
-import { Container, Grid } from "@mui/material";
+import { Grid } from "@mui/material";
 import { FC, useEffect } from "react";
 import { NoteCard } from "./NoteCard";
 import { useNotesStore } from "@/hooks/useNotesStore";

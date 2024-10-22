@@ -1,8 +1,6 @@
-'use client'
 import React, { FC, ReactNode } from 'react'
-import Drawer from '@mui/material/Drawer';
 import Typography from '@mui/material/Typography';
-import { makeStyles } from '@mui/styles'
+import { DrawerMenuItems } from '../DrawerMenuItems';
 import { StyledWrapper, StyledDrawer, StyledChildrenWrapper } from './Layout.style';
 
 interface LayoutProps {
@@ -21,6 +19,7 @@ export const Layout: FC<LayoutProps> = ({ children }) => {
             Ninja Notes
           </Typography>
         </div>
+        <DrawerMenuItems />
       </StyledDrawer>
 
       <StyledChildrenWrapper>
