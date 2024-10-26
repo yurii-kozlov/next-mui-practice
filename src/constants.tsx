@@ -1,4 +1,4 @@
-import { AddCircleOutlineOutlined, SubjectOutlined } from "@mui/icons-material";
+import { AddAlarmOutlined, AddCircleOutlineOutlined, SubjectOutlined } from "@mui/icons-material";
 
 export const ROUTES = {
   HOME: '/',
@@ -16,4 +16,9 @@ export const DRAWER_MENU_ITEMS = [
     icon: <AddCircleOutlineOutlined color="secondary"/>,
     path: '/create'
   },
+  {
+    text: 'Other MUI Components',
+    icon: <AddAlarmOutlined />,
+    path: '/mui-components',
+  }
 ];
