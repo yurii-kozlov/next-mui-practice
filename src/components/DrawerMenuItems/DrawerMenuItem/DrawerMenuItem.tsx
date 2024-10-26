@@ -16,7 +16,6 @@ export const DrawerMenuItem: FC<DrawerMenuItemProps> = ({ menuItem }) => {
 
   const { text, path, icon } = menuItem;
   const isRouteActive = pathname === path;
-  console.log('helo', 'sasd')
 
   return (
     <StyledListItemButton onClick={() => router.push(path)} key={text} isRouteActive={isRouteActive}>
