@@ -51,20 +51,20 @@ export const StyledOffset = styled('div', {
   name: 'Offset'
 })(({ theme }) => ({
   ...theme.mixins.toolbar,
-  marginBottom: theme.spacing(8)
+  marginBottom: theme.spacing(16)
 }))
 
 export const StyledToolbar = styled(Toolbar, {
   name: 'Toolbar'
 })(({ theme }) => ({
   [`&.${MuiToolbarClasses.root}`]: {
-    padding: theme.spacing(10),
+    padding: theme.spacing(8),
     [theme.breakpoints.up('sm')]: {
-      padding: theme.spacing(12),
+      padding: theme.spacing(10),
     },
 
     [theme.breakpoints.up('md')]: {
-      padding: theme.spacing(10),
+      padding: theme.spacing(8),
     },
   }
 }))
@@ -73,4 +73,10 @@ export const StyledDate = styled(Typography, {
   name: 'Date',
 })(() => ({
   flexGrow: 1,
+}))
+
+export const StyledName = styled(Typography, {
+  name: 'Name'
+})(({ theme }) => ({
+  marginRight: theme.spacing(4)
 }))

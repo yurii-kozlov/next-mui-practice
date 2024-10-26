@@ -31,7 +31,8 @@ export const CreateNotes = observer(
       }
 
       if (title && details) {
-        await notesService.postNote({ title, details, category, id: String(Math.random())});
+        const newNote = { title, details, category, id: String(Math.random())};
+        await notesStore.postNote(newNote)
         router.push(ROUTES.NOTES);
       }
     };

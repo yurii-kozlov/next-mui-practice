@@ -6,6 +6,7 @@ import { FC, useEffect } from "react";
 import { NoteCard } from "./NoteCard";
 import { useNotesStore } from "@/hooks/useNotesStore";
 import { observer } from "mobx-react-lite";
+import { toJS } from "mobx";
 
 interface NotesProps {
   notes: Note[];
@@ -15,7 +16,9 @@ export const Notes: FC<NotesProps> = observer(({ notes }) => {
   const notesStore = useNotesStore();
 
   useEffect(() => {
-    notesStore.setNotes(notes);
+    if (notesStore.notes.length === 0) {
+      notesStore.setNotes(notes);
+    }
   }, [])
 
   return (

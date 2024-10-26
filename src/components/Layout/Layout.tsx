@@ -8,10 +8,12 @@ import {
   StyledAppBar,
   StyledOffset,
   StyledToolbar,
-  StyledDate
+  StyledDate,
+  StyledName
 } from './Layout.style';
-import { Typography } from '@mui/material';
+import { Typography, Avatar } from '@mui/material';
 import { format } from 'date-fns';
+import MarioImage from '@/images/mario.png';
 
 interface LayoutProps {
   children: ReactNode;
@@ -23,7 +25,8 @@ export const Layout: FC<LayoutProps> = ({ children }) => {
       <StyledAppBar elevation={0}>
         <StyledToolbar>
           <StyledDate>Today is the {format(new Date(), 'do MMMM Y')}</StyledDate>
-          <Typography>Mario</Typography>
+          <StyledName variant="h6">Mario</StyledName>
+          <Avatar src={MarioImage.src}/>
         </StyledToolbar>
       </StyledAppBar>
       <StyledDrawer

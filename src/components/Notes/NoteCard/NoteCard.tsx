@@ -2,11 +2,11 @@ import CardHeader from "@mui/material/CardHeader";
 import CardContent from "@mui/material/CardContent";
 import { Note } from "@/types/Note";
 import { FC } from "react";
-import { IconButton, Typography } from "@mui/material";
+import { Avatar, IconButton, Typography } from "@mui/material";
 import { DeleteOutlineOutlined } from "@mui/icons-material";
 import { observer } from "mobx-react-lite";
 import { useNotesStore } from "@/hooks/useNotesStore";
-import { StyledCard } from "./NoteCart.style";
+import { StyledCard, StyledCategory } from "./NoteCart.style";
 import { Category } from "@/types/Category";
 
 interface NoteCardProps {
@@ -22,6 +22,7 @@ export const NoteCard: FC<NoteCardProps> = observer(({ note }) => {
     <div>
       <StyledCard elevation={10} isWorkCategory={isWorkCategory}>
         <CardHeader
+          avatar={<StyledCategory category={category}>{category[0].toUpperCase()}</StyledCategory>}
           title={title}
           subheader={category}
           action={

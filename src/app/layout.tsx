@@ -13,7 +13,7 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: "Todo App Template",
+  title: "Todo App with MUI",
   description: "A Todo App template that can be reused to pratice different technologies",
 };
 

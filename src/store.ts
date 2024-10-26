@@ -1,4 +1,4 @@
-import { action, makeObservable, observable } from "mobx";
+import { action, makeObservable, observable, toJS } from "mobx";
 import { Category } from "./types/Category";
 import { notesService } from "./services/notesService";
 import { Note } from "./types/Note";
@@ -25,7 +25,8 @@ class NotesStore {
       setIsTitleError: action,
       setCategory: action,
       setNotes: action,
-      deleteNote: action
+      deleteNote: action,
+      postNote: action
     })
   }
 
@@ -58,6 +59,11 @@ class NotesStore {
     const updatedNotes = this.notes.filter((note) => note.id !== id);
 
     this.notes = updatedNotes;
+  }
+
+  async postNote(newNote: Note): Promise<void> {
+    await notesService.postNote(newNote);
+    this.notes = [...this.notes, newNote];
   }
 };
 
