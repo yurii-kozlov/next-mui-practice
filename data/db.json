@@ -1,0 +1,34 @@
+{
+  "notes": [
+    {
+      "title": "Yoshi's birthday bash",
+      "details": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt veritatis facere soluta quod non officia adipisci vel necessitatibus modi praesentium? Facilis doloremque culpa, soluta dicta aliquid sint saepe delectus expedita.",
+      "category": "reminders",
+      "id": "1"
+    },
+    {
+      "title": "Complete my ninja training",
+      "details": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt veritatis facere soluta quod non officia adipisci vel necessitatibus modi praesentium? Facilis doloremque culpa, soluta dicta aliquid sint saepe delectus expedita.",
+      "category": "work",
+      "id": "2"
+    },
+    {
+      "title": "Order a pizza",
+      "details": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt veritatis facere soluta quod non officia adipisci vel necessitatibus modi praesentium? Facilis doloremque culpa, soluta dicta aliquid sint saepe delectus expedita.",
+      "category": "todos",
+      "id": "3"
+    },
+    {
+      "id": "0.4491835283886252",
+      "title": "Pay he milkman",
+      "details": "Soi oasod oasodaosdoasodasd",
+      "category": "money"
+    },
+    {
+      "id": "0.3305287355764426",
+      "title": "Push changes",
+      "details": "asdasdasd",
+      "category": "work"
+    }
+  ]
+}
