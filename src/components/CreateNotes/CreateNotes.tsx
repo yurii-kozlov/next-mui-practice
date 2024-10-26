@@ -7,7 +7,6 @@ import { useNotesStore } from "@/hooks/useNotesStore";
 import { ChangeEvent, FormEvent } from "react";
 import { RadioGroup, Radio, FormControlLabel, FormLabel } from "@mui/material";
 import { Category } from "@/types/Category";
-import { notesService } from "@/services/notesService";
 import { useRouter } from "next/navigation";
 import { ROUTES } from "@/constants";
 

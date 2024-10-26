@@ -11,7 +11,7 @@ import {
   StyledDate,
   StyledName
 } from './Layout.style';
-import { Typography, Avatar } from '@mui/material';
+import { Avatar } from '@mui/material';
 import { format } from 'date-fns';
 import MarioImage from '@/images/mario.png';
 

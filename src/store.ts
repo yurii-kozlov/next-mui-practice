@@ -1,4 +1,4 @@
-import { action, makeObservable, observable, toJS } from "mobx";
+import { action, makeObservable, observable } from "mobx";
 import { Category } from "./types/Category";
 import { notesService } from "./services/notesService";
 import { Note } from "./types/Note";

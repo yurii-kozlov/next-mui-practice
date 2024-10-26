@@ -6,7 +6,6 @@ import { FC, useEffect } from "react";
 import { NoteCard } from "./NoteCard";
 import { useNotesStore } from "@/hooks/useNotesStore";
 import { observer } from "mobx-react-lite";
-import { toJS } from "mobx";
 
 interface NotesProps {
   notes: Note[];

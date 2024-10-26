@@ -14,7 +14,7 @@ export const StyledCard = styled(Card, {
 export const StyledCategory = styled(Avatar, {
   name: "Category",
   shouldForwardProp: prop => prop !== 'category'
-})<{ category: Category }>(({ theme, category }) => ({
+})<{ category: Category }>(({ category }) => ({
   backgroundColor: getCategoryBackgroundColor(category)
 }));
 
