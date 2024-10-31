@@ -1,4 +1,4 @@
-import { Grid, ImageList, ImageListItem, ImageListItemBar } from "@mui/material";
+import { ImageListItem, ImageListItemBar } from "@mui/material";
 import { IMAGES } from "@/constants";
 import { StyledImagesList } from "./MuiImagesList.style";
 import Image from "next/image";
@@ -9,7 +9,7 @@ export const MuiImagesList = () => {
     <StyledWrapper>
       <StyledImagesList rowHeight={164} cols={3}>
         {IMAGES.map(({ title, img }) => (
-          <ImageListItem>
+          <ImageListItem key={title}>
             <Image
               src={`${img}?w=164&h=164&fit=crop&auto=format&dpr=2`}
               alt={title}
@@ -23,7 +23,7 @@ export const MuiImagesList = () => {
       </StyledImagesList>
       <StyledImagesList variant="woven" rowHeight={164} cols={3} gap={8}>
         {IMAGES.map(({ title, img }) => (
-          <ImageListItem>
+          <ImageListItem key={title}>
             <Image
               src={`${img}?w=164&h=164&fit=crop&auto=format&dpr=2`}
               alt={title}
