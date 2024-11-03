@@ -9,6 +9,7 @@ import { MuiTooltip } from "@/components/MuiTooltip";
 import { MuiTable } from "@/components/MuiTable";
 import { MuiAlert } from "@/components/MuiAlert";
 import { MuiSnackbar } from "@/components/MuiSnackbar";
+import { MuiDialog } from "@/components/MuiDialog";
 
 const MuiComponents = () => {
   return (
@@ -23,6 +24,7 @@ const MuiComponents = () => {
       <Box mb={10}><MuiTable /></Box>
       <Box mb={10}><MuiAlert /></Box>
       <Box mb={100}><MuiSnackbar /></Box>
+      <Box mb={100}><MuiDialog /></Box>
     </Box>
   );
 };
