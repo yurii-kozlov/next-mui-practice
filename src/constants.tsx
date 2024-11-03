@@ -73,3 +73,76 @@ export const IMAGES = [
     title: 'Bike',
   },
 ];
+
+export const TABLE_DATA = [{
+  "id": 1,
+  "first_name": "Roana",
+  "last_name": "Bromilow",
+  "email": "rbromilow0@geocities.jp",
+  "gender": "Female",
+  "ip_address": "106.156.40.25"
+}, {
+  "id": 2,
+  "first_name": "Phillip",
+  "last_name": "Caville",
+  "email": "pcaville1@latimes.com",
+  "gender": "Male",
+  "ip_address": "186.92.218.61"
+}, {
+  "id": 3,
+  "first_name": "Lorry",
+  "last_name": "Deinhard",
+  "email": "ldeinhard2@cpanel.net",
+  "gender": "Male",
+  "ip_address": "208.64.219.58"
+}, {
+  "id": 4,
+  "first_name": "Maureen",
+  "last_name": "Huyche",
+  "email": "mhuyche3@un.org",
+  "gender": "Female",
+  "ip_address": "126.125.90.234"
+}, {
+  "id": 5,
+  "first_name": "Jacquelyn",
+  "last_name": "Rome",
+  "email": "jrome4@uol.com.br",
+  "gender": "Female",
+  "ip_address": "234.117.170.69"
+}, {
+  "id": 6,
+  "first_name": "Sherwood",
+  "last_name": "Deeves",
+  "email": "sdeeves5@skyrock.com",
+  "gender": "Non-binary",
+  "ip_address": "153.143.157.235"
+}, {
+  "id": 7,
+  "first_name": "Pavel",
+  "last_name": "Towe",
+  "email": "ptowe6@ustream.tv",
+  "gender": "Male",
+  "ip_address": "244.46.7.87"
+}, {
+  "id": 8,
+  "first_name": "Tobias",
+  "last_name": "Weller",
+  "email": "tweller7@ftc.gov",
+  "gender": "Male",
+  "ip_address": "239.177.245.91"
+}, {
+  "id": 9,
+  "first_name": "Raddie",
+  "last_name": "Hellens",
+  "email": "rhellens8@cocolog-nifty.com",
+  "gender": "Male",
+  "ip_address": "37.207.137.147"
+}, {
+  "id": 10,
+  "first_name": "Matias",
+  "last_name": "Ledstone",
+  "email": "mledstone9@gizmodo.com",
+  "gender": "Male",
+  "ip_address": "234.102.134.66"
+}]
+
