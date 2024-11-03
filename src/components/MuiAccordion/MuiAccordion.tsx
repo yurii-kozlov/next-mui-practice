@@ -1,7 +1,7 @@
 'use client';
 
 import { ExpandMore } from '@mui/icons-material';
-import { Accordion, AccordionDetails, AccordionSummary, Box, Typography } from '@mui/material';
+import { AccordionDetails, AccordionSummary, Box, Typography } from '@mui/material';
 import { StyledAccordion } from './MuiAccordion.styles';
 import { useState } from 'react';
 import { Panel } from '@/types/Panel';
