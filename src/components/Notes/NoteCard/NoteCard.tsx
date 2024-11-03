@@ -2,7 +2,7 @@ import CardHeader from "@mui/material/CardHeader";
 import CardContent from "@mui/material/CardContent";
 import { Note } from "@/types/Note";
 import { FC } from "react";
-import { Avatar, IconButton, Typography } from "@mui/material";
+import { IconButton, Typography } from "@mui/material";
 import { DeleteOutlineOutlined } from "@mui/icons-material";
 import { observer } from "mobx-react-lite";
 import { useNotesStore } from "@/hooks/useNotesStore";
