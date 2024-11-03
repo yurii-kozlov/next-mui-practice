@@ -11,6 +11,7 @@ import { MuiAlert } from "@/components/MuiAlert";
 import { MuiSnackbar } from "@/components/MuiSnackbar";
 import { MuiDialog } from "@/components/MuiDialog";
 import { MuiProgress } from "@/components/MuiProgress";
+import { MuiSkeleton } from "@/components/MuiSkeleton";
 
 const MuiComponents = () => {
   return (
@@ -27,6 +28,7 @@ const MuiComponents = () => {
       <Box mb={100}><MuiSnackbar /></Box>
       <Box mb={100}><MuiDialog /></Box>
       <Box mb={100}><MuiProgress /></Box>
+      <Box mb={100}><MuiSkeleton /></Box>
     </Box>
   );
 };
