@@ -7,5 +7,4 @@ export const StyledMenuItem = styled(MenuItem, {
   '&:hover': {
     backgroundColor: theme.palette.neutral.tones[50]
   },
-
 }))
