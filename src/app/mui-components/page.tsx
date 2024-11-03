@@ -5,6 +5,7 @@ import { MuiImagesList } from "@/components/MuiImagesList";
 import { MuiMenu } from "@/components/MuiMenu";
 import { MuiBreadcrumbs } from "@/components/MuiBreadcrumbs";
 import { MuiBadge } from "@/components/MuiBadge";
+import { MuiTooltip } from "@/components/MuiTooltip";
 
 const MuiComponents = () => {
   return (
@@ -15,6 +16,7 @@ const MuiComponents = () => {
       <Box mb={100}><MuiMenu /></Box>
       <Box mb={10}><MuiBreadcrumbs /></Box>
       <Box mb={10}><MuiBadge /></Box>
+      <Box mb={10}><MuiTooltip /></Box>
     </Box>
   );
 };
